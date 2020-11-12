@@ -26,12 +26,14 @@ public class Prompter {
         }while(! isAcceptable);
         return isHit;
     }
+
     public void displayProgress(){
         System.out.printf("You have %d tries left to solve : %s%n",game.getRemainingTries(),game.getCurrentProgress());
     }
 
     public void displayOutcome() {
-        if(game.isWon()){
+        if(game.isWon())
+        {
             System.out.printf("Congratulations you won with %d tries remaining.%n",game.getRemainingTries());
         }else{
             System.out.printf("Bummer the word was %s. :( %n",game.getInput());
